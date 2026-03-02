@@ -1,0 +1,307 @@
+.page-home {
+    background-image: url('Image/star_rail_bg_by_kaerralind_dfvq4bl-pre.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+.logo-hsr {
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+}
+.character-card {
+    position: relative;
+    border: 2px solid var(--char-color, #ff69b4) !important;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.character-img-wrapper {
+    background-color: var(--char-color);
+    line-height: 0;
+    position: relative;
+    aspect-ratio: 1 / 1.3; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.character-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+}
+.card-body-custom {
+    padding: 15px 5px;
+    background-color: white;
+    text-align: center;
+    border-top: 2px solid var(--char-color);
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80px;
+}
+.char-name {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.char-info {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: color-mix(in srgb, var(--char-color), transparent 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.view-more-text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.character-card:hover .card-overlay {
+    opacity: 1;
+}
+.stat-label {
+    background: var(--char-color);
+    color: white;
+    padding: 3px 20px;
+    border-radius: 15px 5px 15px 5px;
+    min-width: 100px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-right: 15px;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.detail-divider {
+    position: relative;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.detail-divider::after {
+    content: '✦';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0 15px;
+    color: var(--char-color);
+    font-size: 1.2rem;
+}
+
+.preview-box {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid var(--char-color, #ff69b4);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    position: relative;
+    
+}
+
+.preview-box:hover img {
+    transform: scale(1.05);
+}
+
+#b-name {
+  font-weight: bold;
+}
+.main-wrapper {
+    width: 100%;
+    max-width: 1600px;
+    background-color: #ffffff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    min-height: 100vh;
+    overflow: hidden;
+}
+.detail-left { 
+    flex: 1; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative;
+    min-height: 500px;
+}
+.detail-right {
+    flex: 1;
+    padding: 60px;
+}
+.main-img { 
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+}
+.body-detail { 
+    background-color: #f4f4f4; 
+    background-image:url("Image/space-wallpaper-stars-background.gif");
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.stat-row {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.custom-header {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: var(--char-color);
+    padding: 8px 50px;
+    transform: skewX(-20deg);
+    z-index: 20;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+.custom-header h2 {
+    margin: 0;
+    transform: skewX(20deg);
+    color: white;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.character-link-style {
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    font-size: 0.9rem;
+    color: #000000;
+    z-index: 10;
+}
+.character-link {
+    text-decoration: none;
+    color: #000000 !important;
+    font-weight: normal !important;
+}
+.character-link:hover {
+  text-decoration: underline;
+  color: #0066cc;
+}
+.custom-back-button {
+    position: static; 
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 40px; 
+    margin-bottom: 20px;
+
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.btn-return {
+    background: var(--char-color);
+    color: white !important;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+.btn-return:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+@media (max-width: 767.98px) {
+    .main-wrapper {
+        overflow: visible; /* Biarkan halaman bisa di-scroll ke bawah */
+        height: auto;
+    }
+
+    .detail-container {
+        flex-direction: column; /* Memastikan stacking atas-bawah */
+    }
+
+    .detail-left {
+        min-height: 400px; /* Kurangi tinggi area gambar di mobile */
+        width: 100%;
+        padding-top: 100px; /* Beri ruang agar tidak tertutup header 'Character' */
+    }
+
+    .detail-right {
+        width: 100%;
+        padding: 30px 20px; /* Kurangi padding yang tadinya 60px agar teks tidak sempit */
+    }
+
+    /* Penyesuaian Header "Character" agar tidak terlalu besar di layar kecil */
+    .custom-header {
+        top: 15px;
+        left: 0;
+        padding: 5px 30px;
+    }
+    
+    .custom-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .character-link-style {
+        top: 65px;
+        left: 20px;
+        font-size: 0.8rem;
+    }
+
+    /* Agar gambar karakter pas di layar mobile */
+    .main-img {
+        max-width: 85%;
+        margin-bottom: 20px;
+    }
+
+    /* Mengatur video trailer agar pas di layar HP */
+    .preview-box {
+        margin-top: 10px;
+    }
+}
